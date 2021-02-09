@@ -37,8 +37,8 @@ SRCS	=	./ctype/ft_isalpha.c \
 			./stdlib/ft_labs.c \
 			./stdlib/ft_atoi.c \
 			./stdlib/ft_calloc.c \
-			./stdio/ft_printf.c
-			./stdio/ft_putchar.c
+			./stdio/ft_printf.c \
+			./stdio/ft_putchar.c \
 			./ft_substr.c \
 			./ft_strjoin.c \
 			./ft_strtrim.c \
@@ -58,29 +58,29 @@ SRCS	=	./ctype/ft_isalpha.c \
 			./ft_lstclear.c \
 			./ft_lstiter.c \
 			./ft_lstmap.c \
-			./get_next_line.c \
+			./get_next_line.c
 
 OBJS	=	$(SRCS:.c=.o)
 
 NAME	=	libft.a
 
-CC		=	gcc
+CC	=	gcc
 
 CFLAGS	=	-Wall -Werror -Wextra -I.
 
 .c.o	:
-			$(CC) $(CFLAGS) -c $< -o $@
+		$(CC) $(CFLAGS) -c $< -o $@
 			
-all		:	$(NAME)
+all	:	$(NAME)
 
 ${NAME}	:	$(OBJS)
-			ar rc $(NAME) $(OBJS)
-			ranlib $(NAME)
+		ar rc $(NAME) $(OBJS)
+		ranlib $(NAME)
 
 clean	:
-			rm -f $(OBJS)	
+		rm -f $(OBJS)	
 
 fclean	:	clean
-			rm -f $(NAME)
+		rm -f $(NAME)
 
-re		:	fclean all
+re	:	fclean all
