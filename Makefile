@@ -33,6 +33,7 @@ SRCS	=	./ctype/ft_isalpha.c \
 			./string/ft_strncmp.c \
 			./string/ft_strdup.c \
 			./string/ft_strnstr.c \
+			./string/ft_strspn.c \
 			./stdlib/ft_abs.c \
 			./stdlib/ft_labs.c \
 			./stdlib/ft_atoi.c \

@@ -85,5 +85,6 @@ int		get_next_line(int fd, char **line);
 int		ft_printf(const char *str, ...);
 long    ft_labs(long i);
 int    ft_putchar(int c);
+size_t ft_strspn(const char *s, const char *accept);
 
 #endif
