@@ -23,7 +23,7 @@ size_t ft_strspn(const char *s, const char *accept)
 		i = 0;
 		while (accept[i] && s[index] != accept[i])
 			i++;
-		if (i = ft_strlen(accept))
+		if (i == ft_strlen(accept))
 			return (index);
 		index++;
 	}		
