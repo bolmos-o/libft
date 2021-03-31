@@ -12,25 +12,25 @@
 
 #include "libft.h"
 
-static int copy(char **line, char **buf)
+static int	copy(char **line, char **buf)
 {
 	char	*tmp;
 
 	tmp = 0;
 	if (!(*line))
-		*line =ft_strdup(*buf);
+		*line = ft_strdup(*buf);
 	else
 	{
-		tmp	= ft_strjoin(*line, *buf);
+		tmp = ft_strjoin(*line, *buf);
 		free(*line);
 		*line = tmp;
 	}
 	return (0);
 }
 
-static	int	search(char **line, char **buf)
+static int	search(char **line, char **buf)
 {
-	int	pos;
+	int		pos;
 	char	*tmp;
 
 	if (!*buf)
@@ -45,20 +45,20 @@ static	int	search(char **line, char **buf)
 		return (1);
 	}
 	return (copy(line, buf));
-}	
+}
 
-int get_next_line(int fd, char **line)
+int			get_next_line(int fd, char **line)
 {
 	static char	*buf;
 	int			ret;
 
 	if (BUFFER_SIZE <= 0 || !line || fd < 0)
-		return (-1);	
+		return (-1);
 	*line = NULL;
 	if (search(line, &buf) == 1)
 		return (1);
 	if (!buf && !(buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1))))
-			return (-1);
+		return (-1);
 	while ((ret = read(fd, buf, BUFFER_SIZE)))
 	{
 		if (ret == -1)

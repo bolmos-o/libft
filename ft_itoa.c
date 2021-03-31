@@ -11,13 +11,13 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
-char *ft_itoa(int n)
+
+char	*ft_itoa(int n)
 {
-	char *num;
-	int	odd;
-	int	tmp;
-	int	dig;
+	char	*num;
+	int		odd;
+	int		tmp;
+	int		dig;
 
 	odd = (n < 0) ? 1 : 0;
 	tmp = n;

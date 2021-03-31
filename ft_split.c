@@ -35,8 +35,8 @@ static int	word_count(char const *s, char c)
 static void	clear(char **ar, int w)
 {
 	while (--w >= 0)
-		free (ar[w]);
-	free (ar);
+		free(ar[w]);
+	free(ar);
 }
 
 char		**ft_split(char const *s, char c)
@@ -56,7 +56,7 @@ char		**ft_split(char const *s, char c)
 		{
 			if (!(tmp = ft_strchr(s, c)))
 				tmp = ft_strchr(s, '\0');
-			if(!(array[words++] = ft_substr(s, 0, tmp - s)))
+			if (!(array[words++] = ft_substr(s, 0, tmp - s)))
 				clear(array, words);
 		}
 		if (*s)

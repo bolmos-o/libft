@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t ft_strspn(const char *s, const char *accept)
+size_t	ft_strspn(const char *s, const char *accept)
 {
 	size_t	index;
 	size_t	i;
@@ -26,6 +26,6 @@ size_t ft_strspn(const char *s, const char *accept)
 		if (i == ft_strlen(accept))
 			return (index);
 		index++;
-	}		
+	}
 	return (index);
 }
